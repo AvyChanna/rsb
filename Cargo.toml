@@ -1,0 +1,34 @@
+[package]
+name = "rsb"
+version = "0.1.0"
+edition = "2021"
+authors = ["AvyChanna"]
+repository = "https://github.com/AvyChanna/rsb"
+
+[dependencies]
+## error handling
+anyhow = "1.0.89"
+thiserror = "1.0.64"
+
+## arg parse
+clap = { version = "4.5.19", features = ["derive"] }
+
+## (de)?serialization
+serde = { version = "1.0.210", features = ["derive"] }
+json5 = "0.4.1"
+serde_yml = "0.0.12"
+ron = "0.8.1"
+
+## logging
+log = "0.4.22"
+pretty_env_logger = "0.5.0"
+
+## regex
+regress = "0.10.1"
+
+## md help gen
+clap-markdown = "0.1.4"
+jsonnet-rs = "0.17.0"
+## schema gen
+# typify = "0.2.0"
+# schemars = "0.8.21"
