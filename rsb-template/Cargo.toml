@@ -1,0 +1,18 @@
+[package]
+name = "rsb-template"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+publish.workspace = true
+homepage.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+chrono.workspace = true
+log.workspace = true
+hypertext.workspace = true
+rsb-schema.workspace = true
+clap.workspace = true

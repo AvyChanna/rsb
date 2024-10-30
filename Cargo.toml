@@ -1,34 +1,68 @@
-[package]
-name = "rsb"
-version = "0.1.0"
+[workspace]
+members = ["rsb-schema", "rsb-template"]
+resolver = "2"
+
+[workspace.package]
+version = "0.0.1"
 edition = "2021"
 authors = ["AvyChanna"]
+rust-version = "1.80"
 repository = "https://github.com/AvyChanna/rsb"
+publish = false
+description = "Create resumes from JsonResume structured data"
+homepage = "https://github.com/AvyChanna/rsb"
+license = "MIT"
+
+
+[workspace.dependencies]
+anyhow = "1.0.91"
+chrono = "0.4.38"
+clap = { version = "4.5.20", features = ["derive"] }
+clap-markdown = "0.1.4"
+json5 = "0.4.1"
+jsonnet-rs = "0.17.0"
+git2 = { version = "0.19.0", default-features = false }
+log = "0.4.22"
+hypertext = "0.5.1"
+pretty_env_logger = "0.5.0"
+regex = "1.11.1"
+ron = "0.8.1"
+serde = { version = "1.0.214", features = ["derive"] }
+serde_yml = "0.0.12"
+# workspace crates
+rsb-schema = { path = "rsb-schema" }
+rsb-template = { path = "rsb-template" }
+
+[package]
+name = "rsb"
+build = "build.rs"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+publish.workspace = true
+description.workspace = true
+homepage.workspace = true
+license.workspace = true
+
 
 [dependencies]
-## error handling
-anyhow = "1.0.89"
-thiserror = "1.0.64"
+anyhow.workspace = true
+clap-markdown.workspace = true
+clap.workspace = true
+log.workspace = true
+pretty_env_logger.workspace = true
+rsb-schema.workspace = true
+rsb-template.workspace = true
 
-## arg parse
-clap = { version = "4.5.19", features = ["derive"] }
+[build-dependencies]
+anyhow.workspace = true
+git2.workspace = true
 
-## (de)?serialization
-serde = { version = "1.0.210", features = ["derive"] }
-json5 = "0.4.1"
-serde_yml = "0.0.12"
-ron = "0.8.1"
+[features]
+ron = ["rsb-schema/ron"]
+jsonnet = ["rsb-schema/jsonnet"]
 
-## logging
-log = "0.4.22"
-pretty_env_logger = "0.5.0"
-
-## regex
-regress = "0.10.1"
-
-## md help gen
-clap-markdown = "0.1.4"
-jsonnet-rs = "0.17.0"
-## schema gen
-# typify = "0.2.0"
-# schemars = "0.8.21"
+[badges]
+maintenance.status = "experimental"

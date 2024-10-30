@@ -11,9 +11,7 @@ This document contains the help content for the `rsb` command-line program.
 
 ## `rsb`
 
-Create resumes from JsonResume structured data.
-Input type is infered from file extension.
-(Supports JSON/JSON5/JSONNET/YAML/RON)
+Create resumes from JsonResume structured data
 
 **Usage:** `rsb <COMMAND>`
 

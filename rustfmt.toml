@@ -1,0 +1,5 @@
+hard_tabs = true
+normalize_comments = true
+reorder_impl_items = true
+group_imports = "StdExternalCrate"
+max_width = 120
