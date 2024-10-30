@@ -1,0 +1,97 @@
+schema: uri
+basics:
+  name: string
+  label: string
+  email: email
+  phone: string
+  url: string
+  summary: string
+  location:
+    address: string
+    postalCode: string
+    city: string
+    countryCode: string
+    region: string
+  profiles:
+    - network: string
+      username: string
+      url: string
+work:
+  - name: string
+    location: string
+    description: string
+    position: string
+    url: string
+    startDate: iso8601
+    endDate: iso8601
+    summary: string
+    highlights:
+      - string
+volunteer:
+  - organization: string
+    position: string
+    url: uri
+    startDate: iso8601
+    endDate: iso8601
+    summary: string
+    highlights:
+      - string
+education:
+  - institution: string
+    url: uri
+    area: string
+    studyType: string
+    startDate: iso8601
+    endDate: iso8601
+    score: string
+    courses:
+      - string
+awards:
+  - title: string
+    date: iso8601
+    awarder: string
+    summary: string
+certificates:
+  - name: string
+    date: iso8601
+    url: uri
+    issuer: string
+publications:
+  - name: string
+    publisher: string
+    releaseDate: iso8601
+    url: uri
+    summary: string
+skills:
+  - name: sttring
+    level: string
+    keywords:
+      - string
+languages:
+  - language: string
+    fluency: string
+interests:
+  - name: string
+    keywords:
+      - string
+references:
+  - name: string
+    reference: string
+projects:
+  - name: string
+    description: string
+    highlights:
+      - string
+    keywords:
+      - string
+    startDate: iso8601
+    endDate: string
+    url: uri
+    roles:
+      - string
+    entity: string
+    type: string
+meta:
+  canonical: string
+  version: string
+  lastModified: string
